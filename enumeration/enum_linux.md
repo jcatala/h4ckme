@@ -3,10 +3,53 @@
 
 
 * [Find SUID-bit set files](#suid-binary)
+* [Host Discovery](host-discovery)
+* [Port Scan](port-scan)
+* [Port Forwarding](port-forwarding)
+* [Sudo usage](Sudo-usage)
 * [Find executable with capabilites](#capabilities-executable)
 * [Exploiting wildcards crons](#wild-wildcards)
 * [LinEnum.sh](#linenum.sh)
 
+
+
+
+## Listening ports
+ `$ netstat -l`
+
+## Host discovery
+Assuming that you wanna discover on 10.10.10.0/24 network:
+
+ `$ nmap -sP 10.10.10.0/24`
+
+## Port Scan
+
+Normal scan  
+
+ `$ nmap -sC -sV <<TARGET IP>> -o output_file.nmap`  
+All ports scan
+ `$ nmap -A -T5 -p- <<TARGET IP>> -o output_file.nmap`  
+UDP scan 
+ `$ nmap -sU <<TARGET IP>> -o output_fileudp.nmap`  
+with ncat
+ `$ nc -v -z <<TARGET IP>> 1-9999`
+
+## Port Forwarding
+SSH local port forwarding
+ `$ ssh -L 9999:google.com:80 user@remotemachine`  
+SSH Remote port forwarding
+ `$ ssh -R 9999:localhost:1025 user@remotemachine`
+in a nutshell:
+ `$ ssh -R remoteport:localaddress:localaddressport user@remotemachine`
+
+
+## Sudo usage
+
+the first thing that we must do in a new machine:  
+
+`sudo -l`    
+
+`cat /etc/passwd ; cat /etc/shadow; cat /etc/sudoers`
 
 
 
@@ -48,5 +91,9 @@ rync will execute the script as the user who runs the cron :D
 Bash script tool who gives you a entire surface map of the system :D  
 
 - [LinkToLinenum](https://github.com/jcatala/h4ckme/tree/master/enumeration/linenum.sh)
+- [Link to official repo](https://github.com/rebootuser/LinEnum)
+
+
+
 
 

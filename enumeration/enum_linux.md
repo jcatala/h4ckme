@@ -3,10 +3,10 @@
 
 
 * [Find SUID-bit set files](#suid-binary)
-* [Host Discovery](host-discovery)
-* [Port Scan](port-scan)
-* [Port Forwarding](port-forwarding)
-* [Sudo usage](Sudo-usage)
+* [Host Discovery](#host-discovery)
+* [Port Scan](#port-scan)
+* [Port Forwarding](#port-forwarding)
+* [Sudo usage](#audo-usage)
 * [Find executable with capabilites](#capabilities-executable)
 * [Exploiting wildcards crons](#wild-wildcards)
 * [LinEnum.sh](#linenum.sh)

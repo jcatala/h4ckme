@@ -38,8 +38,10 @@ with ncat
 SSH local port forwarding
  `$ ssh -L 9999:google.com:80 user@remotemachine`  
 SSH Remote port forwarding
- `$ ssh -R 9999:localhost:1025 user@remotemachine`
-in a nutshell:
+ `$ ssh -R 9999:localhost:1025 user@remotemachine`  
+
+in a nutshell:  
+
  `$ ssh -R remoteport:localaddress:localaddressport user@remotemachine`
 
 

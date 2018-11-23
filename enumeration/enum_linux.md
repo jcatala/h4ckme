@@ -2,9 +2,9 @@
 
 
 
-* [Find SUID-bit set files](#suid binary)
-* [Find executable with capabilites](#capabilities executable)
-* [Exploiting wildcards crons](#wild wildcards)
+* [Find SUID-bit set files](#suid-binary)
+* [Find executable with capabilites](#capabilities-executable)
+* [Exploiting wildcards crons](#wild-wildcards)
 * [LinEnum.sh](#linenum.sh)
 
 
@@ -47,6 +47,6 @@ rync will execute the script as the user who runs the cron :D
 
 Bash script tool who gives you a entire surface map of the system :D  
 
-- [LinkToLinenum](https://github.com/jcatala/h4ckme/tree/master/enumeration/LinEnum.sh)
+- [LinkToLinenum](https://github.com/jcatala/h4ckme/tree/master/enumeration/linenum.sh)
 
 

